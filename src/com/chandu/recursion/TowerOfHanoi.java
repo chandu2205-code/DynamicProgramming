@@ -1,5 +1,9 @@
 package com.chandu.recursion;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  *Tower of Hanoi is mathematical game . 3 pegs , Source, Destination, Extra marked as S,D,E
  *and there are n discs , each of different size, which can be inserted into any three pegs
@@ -17,7 +21,24 @@ package com.chandu.recursion;
  * </ul>
  */
 public class TowerOfHanoi {
-    public static void main(String[] args) {
+    private static int functionCallCount;
 
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int discNumber = Integer.parseInt(br.readLine());
+        towerOfHanoi(discNumber,'A','B','C');
+        System.out.println(String.format("Number of function calls for %d discs is %d",discNumber,functionCallCount));
+    }
+
+    private static void towerOfHanoi(int discNumber, char source, char auxiliary, char destination) {
+        functionCallCount++;
+        if(discNumber == 1) {
+            System.out.println(String.format("Move disc %d from %s to %s",discNumber,source,destination));
+            return;
+        }
+        towerOfHanoi(discNumber-1,source,destination,auxiliary);
+        System.out.println(String.format("Move disc %d from %s to %s",discNumber,source,destination));
+        towerOfHanoi(discNumber-1,auxiliary,source,destination);
+        return;
     }
 }
