@@ -39,6 +39,5 @@ public class TowerOfHanoi {
         towerOfHanoi(discNumber-1,source,destination,auxiliary);
         System.out.println(String.format("Move disc %d from %s to %s",discNumber,source,destination));
         towerOfHanoi(discNumber-1,auxiliary,source,destination);
-        return;
     }
 }
