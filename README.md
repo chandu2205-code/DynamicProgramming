@@ -9,4 +9,7 @@ This repository contains problems related to dynamic programming
   * [Codechef Tutorials](https://www.codechef.com/wiki/tutorial-dynamic-programming)
   * [HackcerEarth](https://www.hackerearth.com/practice/notes/dynamic-programming-i-1/)
   * Dynamic Programming by Richard Ernest Bellman
-  * Dynamic Programming for Coding Interviews: A Bottom-Up approach to problem solving
+  * Dynamic Programming for Coding Interviews: A Bottom-Up approach to problem solving 
+  * If Recursive and iterative solutions are equally easy and take almost equal time to 
+    code , then always write iterative solutions . It takes less time and memory to execute .
+    
